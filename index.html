@@ -1,0 +1,288 @@
+<html>
+
+<body>
+    <h1>Gary Other color</h1>
+    <div class="snail">
+        <div class="shell">
+            <div class="shell darker"></div>
+            <div class="dots">
+                <div class="circle"></div>
+                <div class="ellipse"></div>
+                <div class="ellipse"></div>
+                <div class="ellipse"></div>
+                <div class="ellipse"></div>
+                <div class="ellipse"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="swirl">
+                <div class="swirlpart right"></div>
+                <div class="swirlpart left"></div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="head"></div>
+        </div>
+        <div class="eyes">
+            <div class="eyestalk left">
+                <div class="eye">
+                    <div class="iris"></div>
+                </div>
+            </div>
+            <div class="eyestalk right">
+                <div class="eye">
+                    <div class="iris"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        background: rgb(255, 255, 255);
+    }
+    
+    .snail {
+        height: 500px;
+        aspect-ratio: 1;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .shell {
+        height: 90%;
+        background: rgb(238, 163, 93);
+        aspect-ratio: 1/1.25;
+        position: relative;
+        border: 3px solid rgb(0, 0, 0);
+        border-radius: 43% 51% 32% 41% / 54% 51% 41% 43%;
+        overflow: hidden;
+    }
+    
+    .darker {
+        border: unset;
+        width: 95%;
+        aspect-ratio: 1/1.15;
+        background: rgb(92, 65, 40);
+        bottom: 0;
+        left: -5%;
+        position: absolute;
+    }
+    
+    .dots {
+        position: absolute;
+        width: 80%;
+        top: 2rem;
+        left: 1rem;
+        aspect-ratio: 1.2/1;
+        transform: rotate(-10deg);
+    }
+    
+    .dots>div {
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        width: 10px;
+        aspect-ratio: 1;
+        transform: scale(2);
+    }
+    
+    .circle {
+        bottom: 30%;
+        border-radius: 100%;
+    }
+    
+    .dots .circle:last-of-type {
+        right: 0;
+    }
+    
+    .ellipse {
+        border-radius: 75% 100%;
+        bottom: 55%;
+        width: 10px;
+        transform: scale(2.5);
+    }
+    
+    .dots .ellipse {
+        left: 7%;
+        aspect-ratio: 1.2/1;
+        transform: rotate(120deg) scale(3);
+    }
+    
+    .dots .ellipse:nth-of-type(2) {
+        left: 20%;
+        top: 20%;
+        aspect-ratio: 1.5/1;
+        transform: rotate(130deg) scale(4.5);
+    }
+    
+    .dots .ellipse:nth-of-type(3) {
+        left: 50%;
+        top: 0%;
+        aspect-ratio: 1.5/2.3;
+        transform: rotate(90deg) scale(4);
+    }
+    
+    .dots .ellipse:nth-of-type(4) {
+        left: unset;
+        right: 15%;
+        top: 15%;
+        aspect-ratio: 1.2/1;
+        transform: rotate(35deg) scale(4);
+    }
+    
+    .dots .ellipse:nth-of-type(6) {
+        left: unset;
+        right: 5%;
+        aspect-ratio: 1.2/1;
+        transform: rotate(60deg) scale(3);
+    }
+    
+    .swirl {
+        position: absolute;
+        bottom: -5%;
+        height: 85%;
+        width: 45%;
+        left: 10%;
+    }
+    
+    .swirlpart.right {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-right: 25px solid rgb(0, 0, 0);
+        border-top: 30px solid rgb(0, 0, 0);
+        border-left: 12px solid rgb(92, 65, 40);
+        border-radius: 49% 46% 50% 31% / 54% 41% 48% 41%;
+        transform: rotate(20deg);
+    }
+    
+    .swirlpart.left {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        border-right: 20px solid rgb(0, 0, 0);
+        border-left: 30px solid rgb(0, 0, 0);
+        border-bottom: 30px solid rgb(0, 0, 0);
+        border-radius: 21% 35% 47% 43% / 40% 52% 42% 55%;
+        transform: rotate(22deg) scaleY(0.8)scaleX(0.8);
+        top: 6%;
+        left: 17%
+    }
+    
+    .swirlpart.left::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-right: 20px solid rgb(92, 65, 40);
+        border-radius: 21% 35% 47% 43% / 40% 52% 42% 55%;
+        transform: rotate(-90deg) scaleY(0.5) scaleX(4.0);
+        right: -40%;
+        top: 50%;
+    }
+    
+    .body {
+        position: absolute;
+        background-color: rgb(172, 172, 172);
+        width: 93%;
+        height: 15%;
+        bottom: 0;
+        border-radius: 15% 40% 50% 5% / 79% 60% 39% 34%;
+    }
+    
+    .head {
+        position: absolute;
+        width: 25%;
+        height: 130%;
+        background-color: inherit;
+        right: -5%;
+        bottom: 50%;
+        border-bottom-right-radius: 40% 50%;
+        border-top-right-radius: 50% 50%;
+        border-left: 3px solid rgb(0, 0, 0);
+        border-radius: 47% 30% 0% 46% / 50% 41% 38% 50%;
+        transform: rotate(130deg);
+    }
+    
+    .eyes {
+        position: relative;
+        display: flex;
+        margin-left: 40px;
+    }
+    
+    .eyestalk {
+        display: flex;
+        border-left: 3px solid rgb(0, 0, 0);
+        border-right: 3px solid rgb(0, 0, 0);
+        height: 20rem;
+        width: 2.5rem;
+        background: rgb(172, 172, 172);
+        align-items: flex-start;
+        justify-content: center;
+        position: inherit;
+    }
+    
+    .eyestalk::before {
+        content: '';
+        left: -1.2rem;
+        background: rgb(255, 255, 255);
+        position: absolute;
+        width: 2rem;
+        height: 75%;
+        bottom: 0;
+        background: rgb(255, 255, 255);
+        border-right: 3px solid black;
+        border-radius: 0% 100% 39% 61% / 100% 35% 65% 0%;
+        position: absolute;
+        overflow: hidden;
+    }
+    
+    .eyestalk::after {
+        content: '';
+        width: 2rem;
+        height: 75%;
+        right: -1.1rem;
+        bottom: 0;
+        background: rgb(255, 255, 255);
+        border-left: 3px solid black;
+        border-radius: 100% 0% 100% 0% / 31% 100% 0% 69%;
+        position: absolute;
+        overflow: hidden;
+    }
+    
+    .eyestalk.right {
+        margin-left: 10px;
+        transform: rotate(6deg) scale(0.95) translate(0px, -20px);
+    }
+    
+    .eye {
+        position: absolute;
+        height: 100px;
+        aspect-ratio: 1;
+        margin: -10px;
+        border: 3px solid rgb(0, 0, 0);
+        border-radius: 50%;
+        background-color: rgb(255, 247, 174);
+        display: flex;
+        overflow: hidden;
+        z-index: 2
+    }
+    
+    .iris {
+        position: absolute;
+        right: -5px;
+        top: 5px;
+        height: 40px;
+        aspect-ratio: 1;
+        border: 15px solid rgb(251, 255, 0);
+        border-radius: 50%;
+        background-color: rgb(0, 0, 0);
+    }
+</style>
+
+</html>
