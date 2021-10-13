@@ -23,7 +23,8 @@
                     <div class="swirlpart left"></div>
                 </div>
             </div>
-            <div class="bottomshell">
+            <div class="bottomshell">   
+                <div class="left"></div>
             </div>
         </div>
         <div class="eyes">
@@ -70,26 +71,63 @@
     .shell {
         height: 80%;
         aspect-ratio: 1/1.1;
+        position: relative;
     }
     
     .topshell {
         height: 100%;
         width: 100%;
+        position: absolute;
         background: rgb(238, 163, 93);
-        position: relative;
         border: 3px solid rgb(0, 0, 0);
-        border-radius: 43% 51% 32% 41% / 54% 51% 41% 43%;
+        border-radius: 43% 51% 27% 25% / 54% 51% 41% 43%;
         overflow: hidden;
         z-index: 8;
     }
     
     .bottomshell {
         position: absolute;
-        width: 100%;
-        height: 10%;
-        bottom: 0;
-        left: 0;
+        width: 90%;
+        height: 12%;
+        bottom: -2%;
+        left: 8%;
         z-index: 10;
+        background-color: rgba(0, 0, 255, 0);
+    }
+    .bottomshell .left{
+        position: absolute;
+        height:70%;
+        width:30%;
+        bottom:3%;
+        background-color: rgb(92, 65, 40);
+        border-top-left-radius: 70% 90%;
+        border-top-right-radius: 90% 90%;
+        border-bottom-left-radius: 70% 50%;
+        border-bottom-right-radius: 70% 0%;
+        border-left: 4px solid rgb(0, 0, 0);
+        border-bottom: 3px solid rgb(0, 0, 0);
+    }
+    .bottomshell .middle{
+        position: absolute;
+        height:100%;
+        width:40%;
+        right:40%;
+        bottom: -50%;
+        background-color: rgb(128, 128, 128);
+        border-top-left-radius: 70% 100%;
+        border-top-right-radius: 70% 100%;
+        border-top: 3px solid rgb(0, 0, 0);
+    }
+    .bottomshell .right{
+        position: absolute;
+        height:100%;
+        width:40%;
+        right:0%;
+        bottom: -50%;
+        background-color: rgb(128, 128, 128);
+        border-top-left-radius: 70% 100%;
+        border-top-right-radius: 70% 100%;
+        border-top: 3px solid rgb(0, 0, 0);
     }
     
     .darker {
@@ -97,8 +135,8 @@
         width: 100%;
         aspect-ratio: 1;
         background: rgb(92, 65, 40);
-        bottom: -10%;
-        left: -8%;
+        bottom: -5%;
+        left: -15%;
         position: absolute;
     }
     
@@ -213,7 +251,7 @@
         border-radius: 21% 35% 47% 43% / 40% 52% 42% 55%;
         transform: rotate(-90deg) scaleY(0.5) scaleX(4.0);
         right: -40%;
-        top: 50%;
+        top: 60%;
     }
     
     .body {
@@ -222,7 +260,8 @@
         width: 100%;
         height: 15%;
         bottom: 0;
-        border-radius: 50% 46% 10% 10% / 61% 75% 12% 10%;
+        border-radius: 50% 46% 10% 10% / 81% 75% 12% 10%;
+        border-top: 4px solid rgb(0, 0, 0);
         z-index: 6;
         box-shadow: inset -50px 5px 15px 0px #b4b4b4;
     }
